@@ -1,60 +1,69 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import SearchIcon from "../assets/icon/search.svg";
 import PersonIcon from "../assets/icon/person.svg";
+import LPersonIcon from "../assets/icon/lPerson.svg";
 import ShopCartIcon from "../assets/icon/shopcart.svg";
 import WishlistIcon from "../assets/icon/wishlist.svg";
-import { useNavigate } from "react-router-dom";
+import Ai from "../assets/icon/ai.svg";
+import '../css/banner.css';
 
-export default function Banner() {
+const Banner = ({ hasLogin, setHasLogin }) => {
   const navigate = useNavigate();
   return (
     <div className="flex items-center pb-5 float-right w-4/5 justify-between">
+
       {/* 검색창 */}
-      <div className="flex overflow-hidden border-2 border-solid border-mustardYellow rounded-lg w-300">
-        <input
-          type="text"
-          style={{ backgroundColor: "#fffbe0" }}
-          className="p-2 text-sm w-full border-none"
-        />
-        <button className="text-white p-2 cursor-pointer text-sm border-none w-30">
+      <div className="search-container">
+        <input type="text" className="search-box" />
+        <button className="search-button">
           <img src={SearchIcon} alt="search" />
         </button>
       </div>
 
-      {/* 로그인, 장바구니, 하트누른 상품 */}
-      <ul className="flex items-center p-2 m-0 justify-end list-none right-50 gap-2">
-        <li
-          className="flex justify-end content-start flex-col"
-          onclick="window.location.href='Login.html'"
-        >
-          <img className=" w-10 h-10" src={PersonIcon} alt="person" />
-          <strong>로그인</strong>
-        </li>
+      {/* 로그인, 장바구니, 위시리스트, ai추천 */}
 
-        <li
-          className="flex justify-end content-start flex-col"
-          onclick="window.location.href='Cart.html'"
-        >
-          <img className=" w-10 h-10" src={ShopCartIcon} alt="shopcart" />
-          <strong>장바구니</strong>
-        </li>
+      <ul className="mymenu">
 
-        <li
-          className="flex justify-end content-start flex-col"
-          onclick="window.location.href='Wishlist.html'"
-        >
-          <img className=" w-10 h-10" src={WishlistIcon} alt="wishlist" />
-          <strong>좋아요</strong>
-        </li>
+        {hasLogin ? (
+          <Link to="/MyPage">
+            <li style={{ marginLeft: '23px' }}>
+              <img className=" w-10 h-10" src={LPersonIcon} alt="lPerson" />
+              <strong>마이페이지</strong>
+            </li>
+          </Link>
+        ) : (
+          <Link to="/Login">
+            <li style={{ marginLeft: '23px' }}>
+              <img className=" w-10 h-10" src={PersonIcon} alt="person" />
+              <strong>로그인</strong>
+            </li>
+          </Link>
+        )}
 
-        <li
-          className="flex justify-end content-start flex-col"
-          onclick="window.location.href='AI.html'"
-        >
-          <img className=" w-10 h-10" src="img/ai.png" alt="ai" />
-          <strong>AI추천</strong>
-        </li>
-      </ul>
-    </div>
+        <Link to="/Cart">
+          <li style={{ marginLeft: '23px' }}>
+            <div className="pl-1"><img className=" w-10 h-10" src={ShopCartIcon} alt="shopcart" /></div>
+            <strong>장바구니</strong>
+          </li>
+        </Link>
+
+        <Link to="/Wishlist">
+          <li style={{ marginLeft: '23px' }}>
+            <img className=" w-10 h-10" src={WishlistIcon} alt="wishlist" />
+            <strong>좋아요</strong>
+          </li>
+        </Link>
+
+        <Link to="/Ai">
+          <li style={{ marginLeft: '23px' }}>
+            <img className=" w-10 h-10" src={Ai} alt="ai" />
+            <strong>AI추천</strong>
+          </li >
+        </Link>
+      </ul >
+    </div >
   );
 }
+
+export default Banner;

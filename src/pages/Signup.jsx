@@ -4,7 +4,7 @@ import "../css/bootstrap.css";
 import "../css/st.css";
 import "../css/style.css";
 
-export default function Signup() {
+export default function Signup() { // 회원가입 페이지
   const [hasSignup, setHasSignup] = useState(false);
   return (
     <div className=" w-screen h-screen flex flex-col justify-center items-center">

@@ -1,15 +1,17 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import React from "react";
 
 const MainTitle = () => {
   const navigate = useNavigate();
   return (
-    <p className="flex justify-center pb-12" href="index.html" onClick={() => {
+    <p className="flex justify-center pb-12 w-full" href="index.html" onClick={() => {
       navigate("/");
     }}>
-      <span style={{ fontFamily: 'dattebayo' }} className="text-[80px] pl-10 relative font-bold text-green-900 m-0 text-TGreen">
-        GreenShop
-      </span>
+      <Link to="/">
+        <span style={{ fontFamily: 'dattebayo' }} className="text-[80px] font-bold text-green-900 m-0 text-TGreen">
+          GreenShop
+        </span>
+      </Link>
     </p>
   );
 }
