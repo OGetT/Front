@@ -7,6 +7,7 @@ export default function Login() { // 로그인 페이지
   return (
     <div className='flex justify-center items-center flex-col'>
       <Header />
+      <div className="mt-14" style={{ width: '80%', borderBottom: '2px solid #d9ce94' }}> </div>
       {hasLogin ? (
         <div className="MCompletion">
           <div className="separator"></div>
@@ -37,7 +38,7 @@ export default function Login() { // 로그인 페이지
         </div>
       ) : (
         <>
-          <div className="flex justify-center flex-col items-center pt-14">
+          <div className="flex justify-center flex-col items-center">
             <div className="flex flex-col w-1/2 container mx-auto mt-28 mb-28 p-5 border border-mustardGray rounded shadow-lg bg-white">
               <h1 className="text-2xl font-bold mb-5">로그인</h1>
               <form id="product-form" className="space-y-4 flex flex-col w-3/4 mx-auto mt-8 mb-10">

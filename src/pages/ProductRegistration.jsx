@@ -32,8 +32,9 @@ export default function ProductRegistration() { // 상품 등록 페이지
   };
 
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center">
       <Header />
+      <div className="mt-14 mb-14" style={{ width: '80%', borderBottom: '2px solid #d9ce94' }}> </div>
       <div className="container mx-auto mt-28 mb-28 p-5 border border-mustardGray rounded shadow-lg bg-white">
         <h1 className="text-2xl font-bold mb-5">상품 등록</h1>
         <form id="product-form" onSubmit={handleSubmit} className="space-y-4 flex flex-col w-4/5 mx-auto mt-8 mb-10">
