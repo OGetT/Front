@@ -18,7 +18,7 @@ export default function Find() { // 아이디 | 비밀번호 찾기 페이지
                 <input type="text" id="product-name" name="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-mustardYellow focus:border-mustardYellow block w-full p-2.5" />
               </div>
               <div>
-                <label htmlFor="product-name" className="block mb-2 text-sm font-bold text-gray-700">이메일 :</label>
+                <label htmlFor="product-name" className="block mb-2 text-sm font-bold text-gray-700">핸드폰 번호 :</label>
                 <div className='flex'>
                   <input type="text" id="product-name" name="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-mustardYellow focus:border-mustardYellow block w-full p-2.5" />
                   <button type="submit" className="text-white bg-TGreen hover:bg-mustardYellow focus:ring-4 focus:outline-none focus:ring-mustardYellow rounded-lg w-full sm:w-auto px-5 py-2.5 text-center font-bold text-sm whitespace-nowrap ml-3" style={{ color: 'white' }}>인증번호 받기</button>
@@ -42,6 +42,10 @@ export default function Find() { // 아이디 | 비밀번호 찾기 페이지
               <form id="product-form" className="space-y-4 flex flex-col w-4/5 mx-auto mt-8 mb-10">
                 <div>
                   <label htmlFor="product-name" className="block mb-2 text-sm font-bold text-gray-700">이름 :</label>
+                  <input type="text" id="product-name" name="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-mustardYellow focus:border-mustardYellow block w-full p-2.5" />
+                </div>
+                <div>
+                  <label htmlFor="product-name" className="block mb-2 text-sm font-bold text-gray-700">ID :</label>
                   <input type="text" id="product-name" name="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-mustardYellow focus:border-mustardYellow block w-full p-2.5" />
                 </div>
                 <div>
