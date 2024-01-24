@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import Header from '../components/header';
 import { Link } from 'react-router-dom';
+import "../css/bootstrap.css";
+import "../css/st.css";
+import "../css/style.css";
+import Check from '../assets/icon/check.svg';
 
 export default function Login() { // 로그인 페이지
   const [hasLogin, setHasLogin] = useState(false);
@@ -16,23 +20,7 @@ export default function Login() { // 로그인 페이지
             onclick="window.location.href='Wishlist.html'"
             style={{ marginLeft: '23px' }}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="200"
-              height="200"
-              viewBox="0 0 24 24"
-            >
-              <g
-                fill="none"
-                stroke="#305440"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2.5"
-              >
-                <circle cx="12" cy="12" r="9"></circle>
-                <path d="m15 10l-4 4l-2-2"></path>
-              </g>
-            </svg>
+            <img src={Check} alt="Check" />
           </li>
           <strong>로그인 완료</strong>
         </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
-import SignUp from './pages/Signup';
+import SignUp from './pages/SignUp';
 import Cart from './pages/Cart';
 import Find from './pages/Find';
 import ProductRegistration from './pages/ProductRegistration';
@@ -16,9 +16,9 @@ export default function Router() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/Signup' element={<SignUp />} />
         <Route path='/Find' element={<Find />} />
         <Route path='/Login' element={<Login />} />
+        <Route path='/SignUp' element={<SignUp />} />
         <Route path='/Cart' element={<Cart />} />
         <Route path='/Ai' element={<Ai />} />
         <Route path='/MyPage' element={<MyPage />} />
