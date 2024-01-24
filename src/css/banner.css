@@ -6,6 +6,7 @@
   overflow: hidden;
   width: 300px;
   margin-left: -50px;
+  padding: 8px;
 }
 
 .search-box {
@@ -23,13 +24,13 @@
   cursor: pointer;
   font-size: 14px;
   width: 30%;
+  margin-left: 100px;
 }
 
 /* 로그인, 장바구니, 위시리스트, ai추천 */
 .mymenu {
   margin-right: 50px;
   display: flex;
-  align-items: center;
   list-style: none;
   justify-content: flex-end;
   gap: 0.5rem;

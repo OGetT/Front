@@ -11,7 +11,7 @@ import '../css/banner.css';
 const Banner = ({ hasLogin, setHasLogin }) => {
   const navigate = useNavigate();
   return (
-    <div className="flex items-center pb-5 float-right w-4/5 justify-between">
+    <div className="flex items-center pb-5 float-right w-4/5 justify-center">
 
       {/* 검색창 */}
       <div className="search-container">

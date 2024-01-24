@@ -1,15 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 import Header from "../components/header";
-import "../css/bootstrap.css";
-import "../css/st.css";
-import "../css/style.css";
 import Check from '../assets/icon/check.svg';
 
-export default function Signup() { // 회원가입 페이지
+export default function Sing() {
   const [hasSignup, setHasSignup] = useState(false);
   return (
-    <div className=" w-screen h-screen flex flex-col justify-center items-center">
+    <div className='flex justify-center items-center flex-col'>
       <Header />
+      <div className="mt-14" style={{ width: '80%', borderBottom: '2px solid #d9ce94' }}> </div>
       {hasSignup ? (
         <div className="MCompletion">
           <div className="separator"></div>
@@ -23,7 +22,7 @@ export default function Signup() { // 회원가입 페이지
         </div>
       ) : (
         <>
-          <div className="flex justify-center flex-col items-center w-2/4">
+          <div className="flex justify-center flex-col items-center w-4/5">
             <div className="container mx-auto mt-28 mb-28 p-5 border border-mustardGray rounded shadow-lg bg-white">
               <h1 className="text-2xl font-bold mb-5">회원가입</h1>
               <form id="product-form" className="space-y-4 flex flex-col w-4/5 mx-auto mt-8 mb-10">
@@ -59,7 +58,7 @@ export default function Signup() { // 회원가입 페이지
                   <input type="text" id="product-name" name="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-mustardYellow focus:border-mustardYellow block w-full p-2.5" />
                 </div>
                 <label htmlFor="product-name" className="block mb-2 text-sm font-bold text-gray-700">성별 :</label>
-                <form>
+                <div className="flex gap-20 p-3">
                   <label>
                     <input type="radio" name="gender" value="MALE" />
                     남자
@@ -69,7 +68,7 @@ export default function Signup() { // 회원가입 페이지
                     <input type="radio" name="gender" value="FEMALE" />
                     여자
                   </label>
-                </form>
+                </div>
                 <label htmlFor="product-name" className="block mb-2 text-sm font-bold text-gray-700">전화번호 :</label>
                 <div className='flex'>
                   <input type="text" id="product-name" name="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-mustardYellow focus:border-mustardYellow block w-full p-2.5" />
